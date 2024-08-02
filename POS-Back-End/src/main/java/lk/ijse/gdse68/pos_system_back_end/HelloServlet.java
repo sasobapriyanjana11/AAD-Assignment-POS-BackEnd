@@ -1,4 +1,4 @@
-package com.example.POS_Back_End;
+package lk.ijse.gdse68.pos_system_back_end;
 
 import java.io.*;
 
