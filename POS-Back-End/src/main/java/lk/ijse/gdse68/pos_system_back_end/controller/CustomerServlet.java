@@ -51,13 +51,13 @@ public class CustomerServlet extends HttpServlet {
             CustomerDTO customerDTO = jsonb.fromJson(req.getReader(), CustomerDTO.class);
             System.out.println(customerDTO);
 
-            if (customerDTO.getId() == null || !customerDTO.getId().matches("^C\\d{2}-\\d{3}$")) {
+            if (customerDTO.getId() == null || !customerDTO.getId().matches("^(C00-)[0-9]{3}$")) {
                 resp.getWriter().write("Id is empty or invalid!!");
                 return;
-            } else if (customerDTO.getName() == null || !customerDTO.getName().matches("^[A-Z][a-z]+( [A-Z][a-z]+)*$")) {
+            } else if (customerDTO.getName() == null || !customerDTO.getName().matches("^[A-Za-z ]{4,}$")) {
                 resp.getWriter().write("Name is empty or invalid!!");
                 return;
-            } else if (customerDTO.getAddress() == null || !customerDTO.getAddress().matches("/^[A-Z][a-z, ]+$")) {
+            } else if (customerDTO.getAddress() == null || !customerDTO.getAddress().matches("^[A-Za-z0-9., -]{5,}$")) {
                 resp.getWriter().write("Address is empty or invalid!!");
                 return;
             } else if (customerDTO.getSalary() <= 0) {
@@ -142,13 +142,13 @@ public class CustomerServlet extends HttpServlet {
             CustomerDTO customerDTO = jsonb.fromJson(req.getReader(), CustomerDTO.class);
             System.out.println(customerDTO);
 
-            if (customerDTO.getId() == null || !customerDTO.getId().matches("^C\\d{2}-\\d{3}$")) {
+            if (customerDTO.getId() == null || !customerDTO.getId().matches("^(C00-)[0-9]{3}$")) {
                 resp.getWriter().write("id is empty or invalid!");
                 return;
-            } else if (customerDTO.getName() == null || !customerDTO.getName().matches("^[A-Z][a-z]+( [A-Z][a-z]+)*$")) {
+            } else if (customerDTO.getName() == null || !customerDTO.getName().matches("^[A-Za-z ]{4,}$")) {
                 resp.getWriter().write("Name is empty or invalid! ");
                 return;
-            } else if (customerDTO.getAddress() == null || !customerDTO.getAddress().matches("^[A-Z][a-z, ]+$")) {
+            } else if (customerDTO.getAddress() == null || !customerDTO.getAddress().matches("^[A-Za-z0-9., -]{5,}$")) {
                 resp.getWriter().write("Address is empty or invalid");
                 return;
             } else if (customerDTO.getSalary() <= 0) {
