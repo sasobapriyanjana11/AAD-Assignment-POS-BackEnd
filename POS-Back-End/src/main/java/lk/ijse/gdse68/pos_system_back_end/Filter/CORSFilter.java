@@ -16,7 +16,7 @@ import java.util.logging.Logger;
 public class CORSFilter extends HttpFilter {
 
     private static final Logger LOGGER = Logger.getLogger(CORSFilter.class.getName());
-    private static final List<String> ALLOWED_ORIGINS = Arrays.asList("http://localhost:5500", " http://localhost:5500");
+    private static final List<String> ALLOWED_ORIGINS = Arrays.asList("http://localhost:5500", "http://127.0.0.1:5500");
 
     @Override
     protected void doFilter(HttpServletRequest req, HttpServletResponse res, FilterChain chain) throws IOException, ServletException {
