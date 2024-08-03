@@ -18,8 +18,8 @@
           <element id="library" level="project" name="Maven: jakarta.json.bind:jakarta.json.bind-api:2.0.0" />
           <element id="library" level="project" name="Maven: jakarta.json:jakarta.json-api:2.0.0" />
           <element id="library" level="project" name="Maven: org.glassfish:jakarta.json:module:2.0.0" />
-          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.29" />
-          <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.19.4" />
+          <element id="library" level="project" name="Maven: com.mysql:mysql-connector-j:8.0.33" />
+          <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.21.9" />
           <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.18.32" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.32" />
           <element id="library" level="project" name="Maven: ch.qos.logback:logback-classic:1.2.6" />

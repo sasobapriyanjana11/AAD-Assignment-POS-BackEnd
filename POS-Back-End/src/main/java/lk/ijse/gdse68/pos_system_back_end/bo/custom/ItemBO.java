@@ -1,7 +1,6 @@
 package lk.ijse.gdse68.pos_system_back_end.bo.custom;
 
 import lk.ijse.gdse68.pos_system_back_end.bo.SuperBO;
-import lk.ijse.gdse68.pos_system_back_end.dto.CustomerDTO;
 import lk.ijse.gdse68.pos_system_back_end.dto.ItemDTO;
 
 import java.sql.Connection;

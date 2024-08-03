@@ -12,14 +12,10 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class ItemDAOImpl implements ItemDAO {
-    private String code;
-    private String name;
-    private BigDecimal price;
 
-    private int qty;
     @Override
     public boolean save(Connection connection, Item entity) throws SQLException {
-        String sql = "INSERT INTO item (code,name,qty,price) VALUES (?,?,?,?,?)";
+        String sql = "INSERT INTO item (code,name,qty,price) VALUES (?,?,?,?)";
         return CrudUtil.execute(connection,sql,entity.getCode(),entity.getName(),entity.getQty(),entity.getPrice());
     }
 
