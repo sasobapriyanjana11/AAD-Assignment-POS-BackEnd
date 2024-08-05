@@ -15,15 +15,21 @@ public class ItemDAOImpl implements ItemDAO {
 
     @Override
     public boolean save(Connection connection, Item entity) throws SQLException {
-        String sql = "INSERT INTO item (code,name,qty,price) VALUES (?,?,?,?)";
-        return CrudUtil.execute(connection,sql,entity.getCode(),entity.getName(),entity.getQty(),entity.getPrice());
+//        String sql = "INSERT INTO item (code,name,qty,price) VALUES (?,?,?,?)";
+//        return CrudUtil.execute(connection,sql,entity.getCode(),entity.getName(),entity.getQty(),entity.getPrice());
+        System.out.println("Saving Item: " + entity.getCode() + ", " + entity.getName() + ", " + entity.getQty() + ", " + entity.getPrice());
+        String sql = "INSERT INTO item (code, name, qty, price) VALUES (?, ?, ?, ?)";
+        return CrudUtil.execute(connection, sql, entity.getCode(), entity.getName(), entity.getQty(), entity.getPrice());
     }
 
     @Override
     public boolean update(Connection connection, Item entity) throws SQLException {
-        String sql = "UPDATE item SET name = ?,qty = ?, price = ? WHERE code = ?";
-        return CrudUtil.execute(connection,sql,entity.getName(),entity.getQty(),entity.getPrice(),entity.getCode());
+//        String sql = "UPDATE item SET name = ?,qty = ?, price = ? WHERE code = ?";
+//        return CrudUtil.execute(connection,sql,entity.getName(),entity.getQty(),entity.getPrice(),entity.getCode());
 
+        System.out.println("Updating Item: " + entity.getCode() + ", " + entity.getName() + ", " + entity.getQty() + ", " + entity.getPrice());
+        String sql = "UPDATE item SET name = ?, qty = ?, price = ? WHERE code = ?";
+        return CrudUtil.execute(connection, sql, entity.getName(), entity.getQty(), entity.getPrice(), entity.getCode());
     }
 
     @Override
