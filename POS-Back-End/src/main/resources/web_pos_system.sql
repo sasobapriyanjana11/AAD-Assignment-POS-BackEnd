@@ -21,19 +21,26 @@ create table item(
 
 );
 
-create table orders(
-                       order_id VARCHAR(15) PRIMARY KEY,
-                       date DATE NOT NULL,
-                       cust_id VARCHAR(15) NOT NULL,
-                       discount DECIMAL(4,1),
-                       total DECIMAL(10,2) NOT NULL,
-                       CONSTRAINT FOREIGN KEY (cust_id) REFERENCES customer(id) ON DELETE CASCADE ON UPDATE CASCADE
+create table orders (
+                        orderId VARCHAR(15) PRIMARY KEY,
+                        orderDate DATE NOT NULL,
+                        custId VARCHAR(15) NOT NULL,
+                        total DECIMAL(10, 2) NOT NULL,
+                        discount DECIMAL(5, 2) NOT NULL,
+                        subTotal DECIMAL(10, 2) NOT NULL,
+                        cash DECIMAL(10, 2) NOT NULL,
+                        balance DECIMAL(10, 2) NOT NULL,
+                        CONSTRAINT FOREIGN KEY (custId) REFERENCES customer(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-create table order_details(
-                              order_id VARCHAR(15) PRIMARY KEY,
-                              item_code VARCHAR(15) NOT NULL,
-                              unit_price DECIMAL(10,2) NOT NULL,
-                              qty INT,
-                              CONSTRAINT FOREIGN KEY (item_code) REFERENCES item(code) ON DELETE CASCADE ON UPDATE CASCADE
+create table order_details (
+                               detailId INT AUTO_INCREMENT PRIMARY KEY,
+                               orderId VARCHAR(15) NOT NULL,
+                               itemCode VARCHAR(15) NOT NULL,
+                               itemName VARCHAR(255) NOT NULL,
+                               itemPrice DECIMAL(10, 2) NOT NULL,
+                               itemQty INT NOT NULL,
+                               total DECIMAL(10, 2) NOT NULL,
+                               CONSTRAINT FOREIGN KEY (orderId) REFERENCES orders(orderId) ON DELETE CASCADE ON UPDATE CASCADE,
+                               CONSTRAINT FOREIGN KEY (itemCode) REFERENCES item(code) ON DELETE CASCADE ON UPDATE CASCADE
 );
