@@ -44,8 +44,9 @@ The POS System Backend is a RESTful API that supports the frontend operations of
 
  2. **Configure the database**
     
-  Create a MySQL database named pos_system.
+  Create a MySQL database named 'pos_system'.
   Update the persistence.xml file with your MySQL credentials:
+  
   <properties>
     <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/pos_system"/>
     <property name="javax.persistence.jdbc.user" value="your_username"/>
