@@ -1,27 +1,25 @@
+
 DROP DATABASE IF EXISTS pos_system;
 
-CREATE DATABASE IF NOT EXISTS  pos_system;
-
-SHOW DATABASES;
+CREATE DATABASE IF NOT EXISTS pos_system;
 
 USE pos_system;
 
-create table customer(
-                         id VARCHAR(15) PRIMARY KEY,
-                         name VARCHAR(255) NOT NULL,
-                         address VARCHAR(255) NOT NULL,
-                         salary DOUBLE NOT NULL
+CREATE TABLE customer (
+                          id VARCHAR(15) PRIMARY KEY,
+                          name VARCHAR(255) NOT NULL,
+                          address VARCHAR(255) NOT NULL,
+                          salary DOUBLE NOT NULL
 );
 
-create table item(
-                     code VARCHAR(15) PRIMARY KEY,
-                     name VARCHAR(255) NOT NULL,
-                     qty INT NOT NULL,
-                     price DECIMAL(10,2) NOT NULL
-
+CREATE TABLE item (
+                      code VARCHAR(15) PRIMARY KEY,
+                      name VARCHAR(255) NOT NULL,
+                      qty INT NOT NULL,
+                      price DECIMAL(10, 2) NOT NULL
 );
 
-create table orders (
+CREATE TABLE orders (
                         orderId VARCHAR(15) PRIMARY KEY,
                         orderDate DATE NOT NULL,
                         custId VARCHAR(15) NOT NULL,
@@ -33,14 +31,12 @@ create table orders (
                         CONSTRAINT FOREIGN KEY (custId) REFERENCES customer(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-create table order_details (
-                               detailId INT AUTO_INCREMENT PRIMARY KEY,
+CREATE TABLE order_details (
                                orderId VARCHAR(15) NOT NULL,
                                itemCode VARCHAR(15) NOT NULL,
-                               itemName VARCHAR(255) NOT NULL,
-                               itemPrice DECIMAL(10, 2) NOT NULL,
-                               itemQty INT NOT NULL,
-                               total DECIMAL(10, 2) NOT NULL,
-                               CONSTRAINT FOREIGN KEY (orderId) REFERENCES orders(orderId) ON DELETE CASCADE ON UPDATE CASCADE,
-                               CONSTRAINT FOREIGN KEY (itemCode) REFERENCES item(code) ON DELETE CASCADE ON UPDATE CASCADE
+                               unit_price DECIMAL(10, 2) NOT NULL,
+                               qty INT,
+                               PRIMARY KEY (orderId, itemCode),
+                               CONSTRAINT fk_order FOREIGN KEY (orderId) REFERENCES orders(orderId) ON DELETE CASCADE ON UPDATE CASCADE,
+                               CONSTRAINT fk_item FOREIGN KEY (itemCode) REFERENCES item(code) ON DELETE CASCADE ON UPDATE CASCADE
 );
