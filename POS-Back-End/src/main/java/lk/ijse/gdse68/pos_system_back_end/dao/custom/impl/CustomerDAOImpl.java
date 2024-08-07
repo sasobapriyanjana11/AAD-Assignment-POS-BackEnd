@@ -5,6 +5,7 @@ import lk.ijse.gdse68.pos_system_back_end.dao.util.CrudUtil;
 import lk.ijse.gdse68.pos_system_back_end.entity.Customer;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -61,5 +62,17 @@ public class CustomerDAOImpl implements CustomerDAO {
             customer.setSalary(Double.valueOf(rst.getString(4)));
         }
         return customer;
+    }
+
+    @Override
+    public boolean exists(Connection connection, String custId) throws SQLException {
+        String query="SELECT 1 FROM customer WHERE id=?";
+        try(PreparedStatement pst=connection.prepareStatement(query)) {
+            pst.setString(1,custId);
+            try(ResultSet rst=pst.executeQuery()){
+                return rst.next();
+            }
+
+        }
     }
 }

@@ -17,5 +17,8 @@ public class Item {
     private BigDecimal price;
 
 
-
+    public Item(String code, int qty) {
+        this.code = code;
+        this.qty = qty;
+    }
 }
