@@ -38,13 +38,16 @@ The POS System Backend is a RESTful API that supports the frontend operations of
 
 
 ### Steps
+
 1. **Clone the repository**
    ```bash
    git clone https://github.com/sasobapriyanjana11/AAD-Assignment-POS-BackEnd.git
 
 2. **Configure the database**
    - Create a MySQL database named `pos_system`.
+   - 
    - Update the `persistence.xml` file with your MySQL credentials:
+     
      ```xml
      <properties>
          <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/pos_system"/>
@@ -64,45 +67,52 @@ The POS System Backend is a RESTful API that supports the frontend operations of
 
 
 4. **Deploy to Tomcat**
-* Ensure Tomcat is installed and running.
-* Copy the generated WAR file from the `target` directory to the Tomcat `webapps` directory.
-* Restart Tomcat.
+   
+   - Ensure Tomcat is installed and running.
+    - Copy the generated WAR file from the `target` directory to the Tomcat `webapps` directory.
+    - Restart Tomcat.
 
 
 ## Usage
-**Running the server**
+### Running the Server
+
 After installation, run the server by starting Tomcat.
 
-**Project Structure**
-The back-end code is organized to follow best practices and maintainability. Important directories and files include:
+## Project Structure
+   ### Back-end
 
-* src/main/java: Directory containing Java classes.
-* src/main/resources/schema: Database schema.
-* src/main/resources/File: Tomcat Text File.
-* src/main/webapp/WEB-INF/: Configuration files for the JavaEE application.
+   The back-end code is organized to follow best practices and maintainability. Important directories and files include:
+   
+- src/main/java: Directory containing Java classes.
+- src/main/resources/schema: Database schema.
+- src/main/resources/File: Tomcate Text File.
+- src/main/webapp/WEB-INF/: Configuration files for the JavaEE application.
 
-**Project Packages**
+   #### Project Packages
 The back-end codebase is further organized into the following packages:
 
-* `src/main/java/lk/ijse/gdse68/pos_system_back_end`
-  * `api`: Contains classes defining the API endpoints and services.
-  * `bo`: Business Objects - classes that encapsulate business logic.
-  * `dao`: Data Access Objects - classes responsible for database interactions.
-  * `entity`: Entity classes representing database tables.
-  * `dto`: Data Transfer Objects - classes used for data exchange between layers.
-  * `filter`: Contains classes implementing filters for intercepting and processing requests.
+The back-end codebase is further organized into the following packages:
+
+(src/main/java/lk.ijse.gdse68/pos_system_back_end)
+- **api**: Contains classes defining the API endpoints and services.
+- **bo**: Business Objects - classes that encapsulate business logic.
+- **dao**: Data Access Objects - classes responsible for database interactions.
+- **entity**: Entity classes representing database tables.
+- **dto**: Data Transfer Objects - classes used for data exchange between layers.
+- **filter**: Contains classes implementing filters for intercepting and processing requests.
 
 
-**Getting Started**
+## Getting Started
+
 To set up and run the Shop Management project locally, follow these steps:
-
-1. **Clone the repository.**
-2. **Set up the back-end dependencies.**
-3. **Configure the database connection.**
-4. **Deploy the JavaEE application on the Apache Tomcat server.**
+&nbsp;1. Clone the repository.  
+&nbsp;2. Set up the back-end dependencies.  
+&nbsp;3. Configure the database connection.  
+&nbsp;4. Deploy the JavaEE application on the Apache Tomcat server.
 
 
 **Dependencies**
+
 ### Back-end
 
 * Java EE: Enterprise Edition of the Java platform for building robust and scalable enterprise applications.
@@ -112,6 +122,7 @@ To set up and run the Shop Management project locally, follow these steps:
 ### Database
 
 * MySQL Connector: Java-based driver for connecting to MySQL databases. (Version 8.0.33)
+  
 * Java Naming and Directory Interface (JNDI): Java API for connecting to directory services, used for managing database connections efficiently through connection pooling, enhancing performance and scalability.
 
 
@@ -128,20 +139,31 @@ To set up and run the Shop Management project locally, follow these steps:
 ## API Documentation
 For detailed API documentation, please refer to the project’s Swagger UI available.
 
-* [Customer API documentation](#customer-api-link)
-* [Item API documentation](#item-api-link)
-* [Order API documentation](#order-api-link)
-* [Order Details API documentation](#order-details-api-link)
+## API Documentation
+
+- [Customer API documentation](https://www.postman.com/maintenance-pilot-29739562/workspace/gdse68/collection/35386302-2db68e0c-dd89-45ea-aefe-459d3156986c?action=share&creator=35386302)
+- [Item API documentation](https://www.postman.com/maintenance-pilot-29739562/workspace/gdse68/collection/35386302-b1022dbe-131a-4b47-b428-769dd5a2b881?action=share&creator=35386302)
+- [Order API documentation](https://www.postman.com/maintenance-pilot-29739562/workspace/gdse68/collection/35386302-beefca42-358a-4a6b-9403-f640e221c1d0?action=share&creator=35386302)
+- [Order Details API documentation](https://www.postman.com/maintenance-pilot-29739562/workspace/gdse68/collection/35386302-17ec8359-3040-41f5-bd49-2fc518167c6f?action=share&creator=35386302)
+
 
 
 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+     
+      
+<div align="center">
+   #### This project is licensed under the [MIT License](LICENSE)
+   
+    © 2024 All Rights Reserved, Designed By sasobapriyanjana11(https://github.com/sasobapriyanjana11)
+    
+</div>
 
-© 2024 All Rights Reserved, Designed By [sasobapriyanjana11]
+    ## Contact
+    For any questions or issues, please reach out via the GitHub repository or email .[sasoba.zxc@gmail.com].
 
-## Contact
 
-This version includes all the detailed installation and configuration steps, along with the necessary license and contact information. Let me know if there's anything else you'd like to add!
+
 
