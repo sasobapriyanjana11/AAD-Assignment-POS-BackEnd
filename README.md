@@ -137,24 +137,23 @@ To set up and run the Shop Management project locally, follow these steps:
 
 
 ## API Documentation
+
 For detailed API documentation, please refer to the project’s Swagger UI available.
 
-## API Documentation
 
-## API Documentation
-
-- [Customer API documentation](https://www.postman.com/maintenance-pilot-29739562/workspace/gdse68/collection/35386302-2db68e0c-dd89-45ea-aefe-459d3156986c?action=share&creator=35386302)
-- [Item API documentation](https://www.postman.com/maintenance-pilot-29739562/workspace/gdse68/collection/35386302-b1022dbe-131a-4b47-b428-769dd5a2b881?action=share&creator=35386302)
-- [Order API documentation](https://www.postman.com/maintenance-pilot-29739562/workspace/gdse68/collection/35386302-beefca42-358a-4a6b-9403-f640e221c1d0?action=share&creator=35386302)
-- [Order Details API documentation](https://www.postman.com/maintenance-pilot-29739562/workspace/gdse68/collection/35386302-17ec8359-3040-41f5-bd49-2fc518167c6f?action=share&creator=35386302)
+- [Customer API documentation](https://documenter.getpostman.com/view/35386302/2sA3s1mrUH)
+- [Item API documentation](https://documenter.getpostman.com/view/35386302/2sA3s1mrUK)
+- [Order API documentation](https://documenter.getpostman.com/view/35386302/2sA3s1mrUM)
+- [Order Details API documentation](https://documenter.getpostman.com/view/35386302/2sA3s1mrUN)
 
 
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
 <div align="center">
-#### This project is licensed under the [MIT License](LICENSE)
-#### © 2024 All Right Reserved, Designed By [sasobapriyanjana11](https://github.com/sasobapriyanjana11)
+    <p>This project is licensed under the <a href="LICENSE">MIT License</a></p>
+    <p>© 2024 All Rights Reserved, Designed By <a href="https://github.com/sasobapriyanjana11">sasobapriyanjana11</a></p>
 </div>
 
     ## Contact
