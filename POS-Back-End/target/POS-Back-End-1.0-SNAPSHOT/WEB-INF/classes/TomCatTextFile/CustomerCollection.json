@@ -1,0 +1,173 @@
+{
+  "info": {
+    "_postman_id": "35f2d5bd-55ff-4b4b-96b6-1376336e6477",
+    "name": "Customer",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "35385905"
+  },
+  "item": [
+    {
+      "name": "UpdateCustomer",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"dusvi\",\r\n    \"address\":\"baddegama\",\r\n    \"salary\":\"20000\",\r\n    \"id\":\"C00-132\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/POS_Back_End_war_exploded/customer?name=dusvi&address=baddegama&salary=20000&id=C00-132",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "POS_Back_End_war_exploded",
+            "customer"
+          ],
+          "query": [
+            {
+              "key": "name",
+              "value": "dusvi"
+            },
+            {
+              "key": "address",
+              "value": "baddegama"
+            },
+            {
+              "key": "salary",
+              "value": "20000"
+            },
+            {
+              "key": "id",
+              "value": "C00-132"
+            }
+          ]
+        },
+        "description": "This API allows updating a customer"
+      },
+      "response": []
+    },
+    {
+      "name": "GetCustomer",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/POS_Back_End_war_exploded/customer?function=getById&id=C00-132",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "POS_Back_End_war_exploded",
+            "customer"
+          ],
+          "query": [
+            {
+              "key": "function",
+              "value": "getById"
+            },
+            {
+              "key": "id",
+              "value": "C00-132"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DeleteCustomer",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/POS_Back_End_war_exploded/customer?id=C00-005",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "POS_Back_End_war_exploded",
+            "customer"
+          ],
+          "query": [
+            {
+              "key": "id",
+              "value": "C00-005"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "SaveCustomer",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\":\"C00-132\",\r\n    \"name\":\"Thathsara\",\r\n    \"address\":\"matara\",\r\n    \"salary\":\"10000\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/POS_Back_End_war_exploded/customer?id=C00-132&name=Thathsara&address=matara&salary=10000",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "POS_Back_End_war_exploded",
+            "customer"
+          ],
+          "query": [
+            {
+              "key": "id",
+              "value": "C00-132"
+            },
+            {
+              "key": "name",
+              "value": "Thathsara"
+            },
+            {
+              "key": "address",
+              "value": "matara"
+            },
+            {
+              "key": "salary",
+              "value": "10000"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

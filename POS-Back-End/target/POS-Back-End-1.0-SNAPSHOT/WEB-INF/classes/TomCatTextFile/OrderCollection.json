@@ -1,0 +1,74 @@
+{
+  "info": {
+    "_postman_id": "12345678-1234-1234-1234-123456789012",
+    "name": "Order Management",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "12345678"
+  },
+  "item": [
+    {
+      "name": "SaveOrder",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"orderId\": \"ORD-001\",\r\n    \"orderDate\": \"2024-08-07\",\r\n    \"custId\": \"C00-001\",\r\n    \"total\": 100.00,\r\n    \"discount\": 10.00,\r\n    \"subTotal\": 90.00,\r\n    \"cash\": 100.00,\r\n    \"balance\": 0.00,\r\n    \"order_list\": [\r\n        {\r\n            \"orderId\": \"ORD-001\",\r\n            \"itemCode\": \"I00-001\",\r\n            \"qty\": 10,\r\n            \"unit_price\": 2000\r\n        }\r\n    ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/POS_Back_End_war_exploded/order",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "POS_Back_End_war_exploded",
+            "order"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GetOrder",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/POS_Back_End_war_exploded/order?function=getById&orderId=ORD-001",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "POS_Back_End_war_exploded",
+            "order"
+          ],
+          "query": [
+            {
+              "key": "function",
+              "value": "getById"
+            },
+            {
+              "key": "orderId",
+              "value": "ORD-001"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

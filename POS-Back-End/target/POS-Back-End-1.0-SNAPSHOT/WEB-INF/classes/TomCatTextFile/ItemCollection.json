@@ -1,0 +1,169 @@
+{
+  "info": {
+    "_postman_id": "b2d8bcd6-9130-4226-9bba-1234567890ab",
+    "name": "Item",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "35385905"
+  },
+  "item": [
+    {
+      "name": "UpdateItem",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"code\":\"I00-006\",\r\n    \"name\":\"Noodles\",\r\n    \"qty\":3,\r\n    \"price\":950.00\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/POS_Back_End_war_exploded/item?code=I00-006&name=Noodles&qty=3&price=950.00",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "POS_Back_End_war_exploded",
+            "item"
+          ],
+          "query": [
+            {
+              "key": "code",
+              "value": "I00-006"
+            },
+            {
+              "key": "name",
+              "value": "Noodles"
+            },
+            {
+              "key": "qty",
+              "value": "3"
+            },
+            {
+              "key": "price",
+              "value": "950.00"
+            }
+          ]
+        },
+        "description": "This API allows updating an item"
+      },
+      "response": []
+    },
+    {
+      "name": "GetItem",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/POS_Back_End_war_exploded/item?code=I00-006",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "POS_Back_End_war_exploded",
+            "item"
+          ],
+          "query": [
+            {
+              "key": "code",
+              "value": "I00-006"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DeleteItem",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/POS_Back_End_war_exploded/item?code=I00-006",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "POS_Back_End_war_exploded",
+            "item"
+          ],
+          "query": [
+            {
+              "key": "code",
+              "value": "I00-006"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "SaveItem",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"code\":\"I00-006\",\r\n    \"name\":\"Noodles\",\r\n    \"qty\":3,\r\n    \"price\":950.00\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/POS_Back_End_war_exploded/item?code=I00-006&name=Noodles&qty=3&price=950.00",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "POS_Back_End_war_exploded",
+            "item"
+          ],
+          "query": [
+            {
+              "key": "code",
+              "value": "I00-006"
+            },
+            {
+              "key": "name",
+              "value": "Noodles"
+            },
+            {
+              "key": "qty",
+              "value": "3"
+            },
+            {
+              "key": "price",
+              "value": "950.00"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
