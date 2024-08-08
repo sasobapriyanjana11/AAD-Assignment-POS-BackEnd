@@ -141,6 +141,8 @@ For detailed API documentation, please refer to the project’s Swagger UI avail
 
 ## API Documentation
 
+## API Documentation
+
 - [Customer API documentation](https://www.postman.com/maintenance-pilot-29739562/workspace/gdse68/collection/35386302-2db68e0c-dd89-45ea-aefe-459d3156986c?action=share&creator=35386302)
 - [Item API documentation](https://www.postman.com/maintenance-pilot-29739562/workspace/gdse68/collection/35386302-b1022dbe-131a-4b47-b428-769dd5a2b881?action=share&creator=35386302)
 - [Order API documentation](https://www.postman.com/maintenance-pilot-29739562/workspace/gdse68/collection/35386302-beefca42-358a-4a6b-9403-f640e221c1d0?action=share&creator=35386302)
@@ -148,22 +150,13 @@ For detailed API documentation, please refer to the project’s Swagger UI avail
 
 
 
-
 ## License
-
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-     
-      
 <div align="center">
-   #### This project is licensed under the [MIT License](LICENSE)
-   
-    © 2024 All Rights Reserved, Designed By sasobapriyanjana11(https://github.com/sasobapriyanjana11)
-    
+#### This project is licensed under the [MIT License](LICENSE)
+#### © 2024 All Right Reserved, Designed By [sasobapriyanjana11](https://github.com/sasobapriyanjana11)
 </div>
 
     ## Contact
     For any questions or issues, please reach out via the GitHub repository or email .[sasoba.zxc@gmail.com].
-
-
-
 
