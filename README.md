@@ -157,5 +157,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 </div>
 
    ## Contact
-    For any questions or issues, please reach out via the GitHub repository or email .[sasoba.zxc@gmail.com].
+  
+   For any questions or issues, please reach out via the GitHub repository or email [sasoba.zxc@gmail.com](mailto:sasoba.zxc@gmail.com).
+
 
